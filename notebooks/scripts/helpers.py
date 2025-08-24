@@ -3,10 +3,12 @@ from typing import Optional
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from functools import lru_cache
 
 import librosa
 import soundfile as sf
 import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 
 OPUS_MODELS = {
@@ -34,3 +36,10 @@ def validate_pair(src: str, tgt: str) -> str:
         raise ValueError(f"Unsupported translation pair {src}->{tgt}. "
                          f"Supported pairs: {sorted(OPUS_MODELS.keys())}")
     return OPUS_MODELS[key]
+
+
+@lru_cache(maxsize=2)
+def load_opus(model_id: str, device: Optional[str] = None):
+    tok = AutoTokenizer.from_pretrained(model_id)
+    mdl = AutoModelForSeq2SeqLM.from_pretrained(model_id).to(device)
+    return tok, mdl
