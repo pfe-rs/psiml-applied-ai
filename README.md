@@ -6,3 +6,5 @@ Introductory lecture structure is described in [this Google Doc](https://docs.go
 
 In the repo we store the contents for the Google Colab's demo. See the following topics:
 * [AUDIO: Understanding and Generating Speech](./notebooks/PSIML_Intro_Lecture_Voice.ipynb)
+* [NLP: Understanding and Generating Text with Language Models](./notebooks/PSIML_Intro_Lecture_NLP.ipynb)
+* TODO(Vukasin): put a link to the Vision notebook
