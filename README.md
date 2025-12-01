@@ -28,7 +28,7 @@ psiml-applied-ai/
 
 ## 🔵 1. Google Colab Intro  
 **File:** [`notebooks/Psiml_Tour_Collab.ipynb`](notebooks/Psiml_Tour_Collab.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/main/notebooks/Psiml_Tour_Collab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/Psiml_Tour_Collab.ipynb)
 
 
 This notebook gives a quick introduction to **Google Colab** and how to use it for machine learning and data analysis.
@@ -46,7 +46,7 @@ This is the recommended first stop before exploring other notebooks.
 
 ## 👁️ 2. Vision — Find Anything in Images  
 **File:** [`notebooks/PSIML_Tour_Vision.ipynb`](notebooks/PSIML_Tour_Vision.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/main/notebooks/PSIML_Tour_Vision.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_Vision.ipynb)
 
 This notebook focuses on modern **vision models** that can “find anything” in an image using natural language or flexible detection tools, going beyond classic object detection.
 
@@ -63,7 +63,7 @@ This notebook focuses on modern **vision models** that can “find anything” i
 
 ## 📝 3. NLP — Understanding and Generating Text  
 **File:** [`notebooks/PSIML_Tour_NLP.ipynb`](notebooks/PSIML_Tour_NLP.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/main/notebooks/PSIML_Tour_NLP.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_NLP.ipynb)
 
 This notebook introduces **language models** and practical NLP workflows.
 
@@ -84,7 +84,7 @@ You will see how to go from raw text to useful predictions in just a few lines o
 
 ## 🔊 4. Voice — Understanding and Generating Speech  
 **File:** [`notebooks/PSIML_Tour_Voice.ipynb`](notebooks/PSIML_Tour_Voice.ipynb)
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/main/notebooks/PSIML_Tour_Voice.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_Voice.ipynb)
 
 This notebook covers **speech AI**, including both _speech-to-text_ and _text-to-speech_.
 
