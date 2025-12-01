@@ -31,14 +31,7 @@ psiml-applied-ai/
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/Psiml_Tour_Collab.ipynb)
 
 
-This notebook gives a quick introduction to **Google Colab** and how to use it for machine learning and data analysis.
-
-### You will learn:
-- What Google Colab is and how it works  
-- How to run cells, restart runtimes, and manage notebooks  
-- How to use GPU/TPU resources  
-- How to upload / download files and work with Google Drive  
-- Basic workflow for running the other PSIML Applied AI notebooks  
+This notebook provides a quick introduction to Google Colab—an online environment for running Python and Jupyter notebooks with many scientific and machine-learning libraries preinstalled. It demonstrates how to execute Python code and install additional packages directly within Colab.
 
 This is the recommended first stop before exploring other notebooks.
 
@@ -48,37 +41,30 @@ This is the recommended first stop before exploring other notebooks.
 **File:** [`notebooks/PSIML_Tour_Vision.ipynb`](notebooks/PSIML_Tour_Vision.ipynb)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_Vision.ipynb)
 
-This notebook focuses on modern **vision models** that can “find anything” in an image using natural language or flexible detection tools, going beyond classic object detection.
+This notebook demonstrates how modern vision models can locate, segment, and even modify objects in images using natural-language prompts. It combines three powerful tools: **Grounding DINO** for zero-shot object detection, **Segment Anything (SAM)** for generating high-quality masks, and **diffusers** pipelines for text-to-image generation and inpainting.
 
 ### You will learn:
-- The difference between traditional object detection and foundation vision models  
-- How to detect or segment objects using **text prompts**  
-- How to highlight, crop, or mask regions of interest  
-- How to build practical pipelines for:
-  - Searching for objects  
-  - Extracting and visualizing regions  
-  - Using vision models as tools within larger systems  
+- How zero-shot object detection works with **Grounding DINO**  
+- How to turn detected boxes into segmentation masks using **SAM**  
+- How to use **inpainting** models to replace or modify objects in the image  
+- How to run complete, practical workflows for:
+  - Finding objects using text prompts  
+  - Visualizing detections and masks  
+  - Editing images by removing or altering selected regions  
 
----
 
 ## 📝 3. NLP — Understanding and Generating Text  
 **File:** [`notebooks/PSIML_Tour_NLP.ipynb`](notebooks/PSIML_Tour_NLP.ipynb)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_NLP.ipynb)
 
-This notebook introduces **language models** and practical NLP workflows.
+This notebook is a compact tour of modern language models: it starts with using LLM chat APIs (with system prompts, multi-turn conversations, and sampling parameters), then shows how to run a **small language model (SLM)** directly in Colab, and finally introduces a **vision-language model (VLM)** for image captioning.
 
 ### You will learn:
-- How large language models generate and transform text  
-- How tokenization works and why context length matters  
-- Basic prompting strategies  
-- How to use common NLP pipelines for:
-  - Text generation  
-  - Classification  
-  - Sentiment analysis  
-  - Summarization  
-  - Named Entity Recognition (NER)  
-
-You will see how to go from raw text to useful predictions in just a few lines of code.
+- How to call chat-style LLM APIs from code and structure system/user/assistant messages  
+- How parameters like **temperature** and **top-p** affect model outputs  
+- How to steer behavior with system prompts (e.g. for translation and “tricky” examples)  
+- How to load and run a small open-source language model with `AutoModelForCausalLM` in Colab  
+- How to use a vision-language model (`AutoModelForVision2Seq`) to generate natural language descriptions from images  
 
 ---
 
@@ -86,15 +72,15 @@ You will see how to go from raw text to useful predictions in just a few lines o
 **File:** [`notebooks/PSIML_Tour_Voice.ipynb`](notebooks/PSIML_Tour_Voice.ipynb)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pfe-rs/psiml-applied-ai/blob/master/notebooks/PSIML_Tour_Voice.ipynb)
 
-This notebook covers **speech AI**, including both _speech-to-text_ and _text-to-speech_.
+This notebook walks through a full speech-to-speech translation (S2ST) pipeline using a cascaded approach: **ASR → MT → TTS**. It uses a Whisper-style speech recognition model (`AutoModelForSpeechSeq2Seq` + `AutoProcessor`) to transcribe audio, a machine translation component (via OPUS-MT), and an XTTS-based `TTS` model to generate speech in the target language, with examples built on the Common Voice dataset.
 
 ### You will learn:
-- How automatic speech recognition (ASR) models work in practice  
-- How to transcribe audio into text  
-- How to generate synthetic speech  
-- Basics of audio processing in Python (sampling, waveforms, spectrograms)  
+- What speech-to-speech translation is and why cascaded ASR → MT → TTS is a practical solution  
+- How to load and run an ASR model with Hugging Face Transformers and pipelines  
+- How to plug in a machine translation model (OPUS-MT) between ASR and TTS  
+- How to use an XTTS text-to-speech model to synthesize translated speech  
+- How to combine all components into a simple end-to-end speech-to-speech translation pipeline  
 
-It demonstrates complete workflows for turning **audio → text** and **text → audio**.
 
 ---
 
@@ -118,6 +104,17 @@ All notebooks are intended to be executed on **Google Colab**.
 3. Choose **Upload**, select the notebook, and run it  
 4. Execute cells from top to bottom  
    (install commands like `pip install ...` should be run first)
+
+
+## ⚙️ Setting up the GPU (T4) in Google Colab
+
+To ensure the notebooks run fast and smoothly, set Colab to use a **T4 GPU**:
+
+1. Open the notebook in Colab  
+2. Go to **Runtime → Change runtime type**  
+3. Under **Hardware accelerator**, choose **GPU**  
+4. Under **GPU type**, select **T4** (if available)  
+5. Click **Save**  
 
 ---
 
